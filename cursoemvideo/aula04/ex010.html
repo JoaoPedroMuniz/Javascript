@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição</title>
+    <style>
+        body{
+            background-color: rgb(67, 69, 99);
+            font: normal 1.25rem Arial, sans-serif;
+            margin: auto;
+            text-align: center;
+            color: white;
+            border: 2px solid black;
+            width: 650px;
+            height: 350px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 280px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.425);
+        }
+
+        div#res{
+            margin-top: 0.875rem;
+        }
+
+        input.botão{
+            border: 1px solid black;
+            border-radius: 8px;
+            align-items: center;
+            background-color: rgb(88, 88, 88);
+            color: white;
+            justify-content: center;
+            line-height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de mutas</h1>
+    Velocidade do carro: <input class="botão" type="number" name="vel" id="vel"> km/h
+
+    <input class='botão' type="button" value="Verificar" onclick="Enviado()">
+
+    <div id="res">Resultado</div>
+    <script>
+        function Enviado(){
+            var vel = window.document.getElementById('vel')
+
+            var velocidade = Number(vel.value)
+
+            var res = document.getElementById('res')
+
+
+            /*Se você for usar mais de um 
+            componente de texto como o res 
+            neste exemplo, use sempre '+=' a 
+            partir do segundo uso, como por 
+            exemplo... LINHA 60!*/
+            res.innerHTML = `<p>Sua velocidade atual é de ${velocidade}km/h</p>`
+
+            if (velocidade > 70)
+            {
+                //AQUI!!!
+                res.innerHTML += `<p>Você foi multado por utrapassar a velocidade!(${velocidade}km/h) Cuidado da próxima vez!</p>`
+            } 
+            res.innerHTML += `<p>Dirija sempre com moderação!</p>`
+            
+        }   
+    </script>
+</body>
+</html>

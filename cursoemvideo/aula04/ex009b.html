@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição País</title>
+    <style>
+        body{
+            background-color: rgb(67, 69, 99);
+            font: normal 1.25rem Arial, sans-serif;
+            margin: auto;
+            text-align: center;
+            color: white;
+            border: 2px solid black;
+            width: 650px;
+            height: 350px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 280px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.425);
+        }
+
+        div#res{
+            margin-top: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de País</h1>
+    <p>De qual País você é? <input type="text" name="txtpais" id="txtpais"> <input type="button" value="Enviar" onclick="confirmação()"></p>
+    <div id="res"></div>
+    <script> function confirmação(){
+        var nac = document.querySelector('input#txtpais')
+        var nacionalidade = String(nac.value)
+        var res = document.querySelector('div#res')
+        res.innerHTML = `Você é da(o) ${nacionalidade}.`
+        if (nacionalidade.toLocaleUpperCase() != 'BRASIL'){
+            res.innerHTML += `<p>Você é Estrangeiro visitando/vivendo no Brasil</p>` 
+        } else{
+            res.innerHTML += `<p>Você é Brasileiro vivendo no Brasil</p>`
+        }
+
+    }
+    </script>
+
+    
+</body>
+</html>
