@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(101, 61, 133);
+            font: normal 1.25rem arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        main{
+            border-radius: 0.875rem;
+            margin: 1rem;
+            padding: 0.5rem;
+            background-color: rgb(96, 90, 182);;
+        }
+    </style>
+    <title>DOM</title>
+</head>
+<body>
+    <main>
+        <h1>Estudando DOM JS</h1>
+        <p id="primeiro">Aqui vai o resultado</p>
+        <p class="segundo">Aprendendo a usar o <strong>DOM</strong> em JS</p>
+        <p class="segundo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima assumenda, laborum repellat libero minus cumque obcaecati cupiditate aliquid, soluta at ut, repellendus id. Dolores ad hic eveniet aliquam beatae nemo?</p>
+        <div name="terceiro">Clique em mim</div>
+    </main>
+    <script>
+
+        var p1 = window.document.querySelector('p#primeiro')
+        window.document.write(`Está escrito: ${p1.innerText} <br>`)
+        
+        var p2 = window.document.querySelectorAll('p.segundo')[1]
+        window.document.write(`Segundo está escrito: ${p2.innerText} <br>`)
+
+        var msg = window.document.getElementsByName('terceiro')[0]
+        document.write(`Terceiro está escrito: ${msg.innerHTML}`)
+        
+        var corpo = window.document.body
+        corpo.style.background = 'darkgreen'
+        p1.style.color = 'Yellow'
+
+    </script>
+</body>
+</html>
