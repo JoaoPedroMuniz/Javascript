@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(99, 116, 153);
+}
+
+header{
+    margin: auto;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main{
+    margin: auto;
+    padding: 1rem;
+    background-color: white;
+    width: 700px;
+    height: 600px;
+}
+
+main input{
+    margin-bottom: 0.6rem;
+}

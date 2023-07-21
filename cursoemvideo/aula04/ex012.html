@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+    <style>                
+        body{
+            background-color: rgb(67, 69, 99);
+            font: normal 1.25rem Arial, sans-serif;
+            margin: auto;
+            text-align: center;
+            color: white;
+            border: 2px solid black;
+            width: 650px;
+            height: 350px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 280px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.425);
+    }
+
+    div#res{
+        margin-top: 0.875rem;
+    }</style>
+</head>
+<body>
+    <h1>Quantas horas é agora?</h1>
+    <input type="number" name="hora" id="hora">
+    <input type="button" value="Enviar" onclick="verificar()">
+    <div id="res">Resultado</div>
+    <script>
+        function verificar(){
+            var hora = document.getElementById('hora')
+
+            var horario = Number(hora.value)
+
+            var res = document.getElementById('res')
+
+            if (horario >= 12 && horario < 18){
+                res.innerHTML = `<p>Agora são ${horario}h.<br> <strong>Boa tarde!</strong></p>`
+            } else if (horario >= 18 && horario <= 23.59){
+                res.innerHTML = `<p>Agora são ${horario}h. <br> <strong>Boa noite!</strong></p>`
+            } else if (horario >=0 && horario < 6){
+                res.innerHTML = `<p>Agora são ${horario}h. <br> <strong>Boa madrugada!</strong></p>`
+            } else {
+                res.innerHTML = `<p>Agora são ${horario}h. <br> <strong>Bom dia!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>

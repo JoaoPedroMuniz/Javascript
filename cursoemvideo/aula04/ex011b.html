@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+    <style>
+        body{
+            background-color: rgb(67, 69, 99);
+            font: normal 1.25rem Arial, sans-serif;
+            margin: auto;
+            text-align: center;
+            color: white;
+            border: 2px solid black;
+            width: 650px;
+            height: 350px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 280px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.425);
+        }
+
+        div#res{
+            margin-top: 0.875rem;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Você pode votar?</h1>
+    <input type="number" name="txtida" id="txtida">
+    <input type="button" value="Enviar" onclick="vota()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function vota(){
+            var ida = document.getElementById('txtida')
+            
+            var idade = Number(ida.value)
+            
+            var res = document.getElementById('res')
+
+            if (idade < 16){
+                res.innerHTML = `Não pode votar, pois é de menor de 16 anos!`
+            } else if (idade < 18 || idade >= 70){
+                res.innerHTML = `Voto opcional!`
+            } else{
+                res.innerHTML =  `Voto obrigatório por ser maior de idade e ter menos que 70 anos!` 
+            }
+            
+        }
+    </script>
+</body>
+</html>

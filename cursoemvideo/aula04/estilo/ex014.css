@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: normal 1.25rem Arial, sans-serif;
+}
+
+body{
+    margin-top: 7rem;
+    background-color: khaki;
+    width: 98vw;
+    height: 100vh;
+}
+
+header{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+main{
+    margin: auto;
+    padding: 0.875rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.7rem;
+    background-color: rgb(206, 205, 205);
+    width: 700px;
+    height: 500px;
+}
+
+#imagem img{
+    width: 450px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: rgba(9, 9, 49, 0.849);
+}
+
+footer{
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
