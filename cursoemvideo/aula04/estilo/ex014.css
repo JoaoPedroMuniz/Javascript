@@ -39,6 +39,7 @@ main{
     border-radius: 50%;
     object-fit: cover;
     background-color: rgba(9, 9, 49, 0.849);
+    border: 1px solid rgba(0, 0, 0, 0.555);
 }
 
 footer{

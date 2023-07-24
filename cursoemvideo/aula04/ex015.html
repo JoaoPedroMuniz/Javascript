@@ -11,29 +11,25 @@
         <h1>Verificador de Idade</h1>
     </header>
     <main>
-        Ano de Nascimento: <input type="number" name="nasc" id="nasc"> <br>
-        Sexo: <input type="radio" name="sexo" id="Fem">Masculino <input type="radio" name="sexo" id="Fem"> Feminino <br>
-        <input type="button" value="Verificar" onclick="identificar()">
+        <p>Ano de Nascimento: <input type="number" name="nasc" id="nasc" min="1900" max="2023">
+        </p>
+
+        <p>Sexo: <input type="radio" name="sexo" id="masculino" checked>
+
+        <label for="masculino" >Masculino</label>
+
+        <input type="radio" name="sexo" id="feminino"> 
+
+        <label for="feminino">Feminino</label>
+        </p>
+
+        <input id="verificador" type="button" value="Verificar" onclick="identificar()">
+        <div id="res">Veja o resultado após preencher as informações acima</div>
     </main>
     <footer><a href="https://github.com/JoaoPedroMuniz">@JoãoPedroMuniz</a></footer>
     <script>
-        function identificar(){
-            var nasc = document.querySelector('input#nasc')
 
-            var data = Number(nasc.value)
-
-            var sex = document.querySelector('[name="sexo"]')
-
-            var sexo = String(sex.value)
-
-            var agora = new Date()
-
-            var ano = agora.getFullYear
-
-            if (sexo == 'Masculino' && nasc <  ){
-                
-            }
-        }
     </script>
+    <script src="arquivosjs/aula015.js"></script>
 </body>
 </html>
