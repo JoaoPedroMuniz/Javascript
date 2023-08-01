@@ -5,6 +5,8 @@ do{
     c++
 } while (c <= 3)*/
 
-for (var c = 1; c <= 3; c++){
-    console.log(`Tudo bem? 0w0 ${c}`)
+console.log('Começando...')
+for (var c = 1; c <= 5; c++){
+    console.log(`n°: ${c}`)
 }
+console.log('Fim')
