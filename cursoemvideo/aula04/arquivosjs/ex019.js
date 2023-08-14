@@ -23,7 +23,7 @@ function Gerar() {
         var res = document.getElementById('res');
     
         // Verifica se o valor inserido é um número válido
-        if (isNaN(n1)) {
+        if (isNaN(n1) || n1 == '') {
         alert('Digite um número por favor!');
         } else {
         // Limpa o conteúdo da caixa de resposta antes de gerar a nova tabuada
